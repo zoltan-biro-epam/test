@@ -4,7 +4,7 @@
 
 - [Git Basics](git-basics)
 - [Versioning](versionin)
-- [Branching and Merging](branching-merging]
+- [Branching and Merging](branching-merging)
 - [Undoing things](undoing)
 - [Submodules](submodules)
 
