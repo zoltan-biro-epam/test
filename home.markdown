@@ -2,11 +2,11 @@
 
 ### Chapters
 
-- [Git Basics]
-- [Versioning]
-- [Branching and Merging]
-- [Undoing things]
-- [Submodules]
+- [Git Basics](git-basics)
+- [Versioning](versionin)
+- [Branching and Merging](branching-merging]
+- [Undoing things](undoing)
+- [Submodules](submodules)
 
 ### Resources
 
