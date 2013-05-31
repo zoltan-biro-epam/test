@@ -37,12 +37,22 @@ $ git clone file:///d/git/epam2 epam3
 Cloning into 'epam3'...
 warning: You appear to have cloned an empty repository.
 ```
+
+The clone command is equivalent to:
+``` bash 
+$ git init .
+$ git remote add origin https://git.epam.com/gabor_czigola/git_example.git
+```
+
+Most of the time you will start working with an existing repository:
+
 ``` bash 
 $ git clone https://git.epam.com/gabor_czigola/git_example.git gitex1
 Cloning into 'gitex1'...
 Username for 'https://git.epam.com': gabor_czigola
 Password for 'https://gabor_czigola@git.epam.com'
 ```
+
 ``` bash 
 $ git clone git@git.epam.com:gabor_czigola/git_example.git gitex2
 Cloning into 'gitex2'...
