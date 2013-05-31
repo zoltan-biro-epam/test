@@ -42,7 +42,10 @@ The clone command is equivalent to:
 
 ``` bash
 $ git init .
-$ git remote add origin https://git.epam.com/gabor_czigola/git_example.git
+$ git remote add --track master origin https://git.epam.com/gabor_czigola/git_example.git
+$ git remote -v
+origin  https://git.epam.com/gabor_czigola/git_example.git (fetch)
+origin  https://git.epam.com/gabor_czigola/git_example.git (push)
 ```
 
 Most of the time you will start working with an existing repository:
