@@ -13,4 +13,12 @@
 ###### Distributed Version Control Systems ######
 ![Distributed Version Control Systems](http://git-scm.com/figures/18333fig0103-tn.png "Distributed Version Control Systems")
 
+### Getting Started ###
+
 ### Comparison ###
+
+* Stores snapshots, past is always accessible.
+* Three way merge, resolves tree conflicts with an ease.
+* Cheap branching and merging.
+* Free as in free beer.
+* Vivid ecosystem, Git is a [platform](http://git.epam.com) and a [network](http://github.com)!
