@@ -24,8 +24,11 @@ Install [package git on your Linux](http://git-scm.com/download/linux) or [mysys
 ##### Create Repository #####
 
 > $ cd /d
+  
 > $ mkdir git
+  
 > $ git init epam1
+  
 > $ git init --bare epam2
 
 ##### Clone Repository #####
@@ -33,12 +36,12 @@ Install [package git on your Linux](http://git-scm.com/download/linux) or [mysys
 > git clone file:///d/git/epam2 epam3
 > Cloning into 'epam3'...
 > warning: You appear to have cloned an empty repository.
-
+  
 > $ git clone https://git.epam.com/gabor_czigola/git_example.git gitex1
 > Cloning into 'gitex1'...
 > Username for 'https://git.epam.com': gabor_czigola
 > Password for 'https://gabor_czigola@git.epam.com':
-
+  
 > $ git clone git@git.epam.com:gabor_czigola/git_example.git gitex2
 > Cloning into 'gitex2'...
 
