@@ -23,13 +23,12 @@ Install [package git on your Linux](http://git-scm.com/download/linux) or [mysys
 
 ##### Create Repository #####
 
-> $ cd /d
-  
-> $ mkdir git
-  
-> $ git init epam1
-  
-> $ git init --bare epam2
+``` bash
+$ cd /d
+$ mkdir git
+$ git init epam1
+$ git init --bare epam2
+```
 
 ##### Clone Repository #####
 
