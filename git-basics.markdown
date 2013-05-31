@@ -1,6 +1,6 @@
 # Git Basics #
 
-[Git](http://en.wikipedia.org/wiki/Git_(software)) is a distributed revision control and source code management systems.
+[Git](http://en.wikipedia.org/wiki/Git_(software%29) is a distributed revision control and source code management systems.
 
 ### Introduction ###
 
