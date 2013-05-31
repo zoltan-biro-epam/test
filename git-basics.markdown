@@ -39,6 +39,7 @@ warning: You appear to have cloned an empty repository.
 ```
 
 The clone command is equivalent to:
+
 ``` bash
 $ git init .
 $ git remote add origin https://git.epam.com/gabor_czigola/git_example.git
