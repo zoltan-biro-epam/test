@@ -48,6 +48,9 @@ $ git clone git@git.epam.com:gabor_czigola/git_example.git gitex2
 Cloning into 'gitex2'...
 ```
 
+Public key based authentication is the most convenient. You should generate yourself a private-public key pair (or reuse an existing one.) Use *ssh-keygen* on [Windows](https://help.github.com/articles/generating-ssh-keys#platform-windows) or [Linux](https://help.github.com/articles/generating-ssh-keys#platform-linux), or [PuTTY](http://katsande.com/using-puttygen-to-generate-ssh-private-public-keys) to create a new key pair.
+Copy-paste the public key to https://git.epam.com/keys and append your private key to *~/.ssh/id_rsa* .
+
 ### Comparison ###
 
 * Stores snapshots, past is always accessible.
