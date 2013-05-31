@@ -4,7 +4,7 @@
 
 ### Introduction ###
 
-###### Local Version Control Systems ######
+##### Local Version Control Systems #####
 ![Local Version Control Systems](http://git-scm.com/figures/18333fig0101-tn.png "Local Version Control Systems")
 
 ###### Centralized Version Control Systems ######
