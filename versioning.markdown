@@ -77,7 +77,24 @@ doc/**/*.txt
 
 Git limitation: git can't track empty directories. Convention is to add an empty file named *empty* or *.gitignore*. In fact, Git does not track directories at all, it only tracks files, creating the directory structures based on their paths.
 
+You can use *gir rm* and *git mv* to remove and move files. Git tracks moves implicitely.
+
 ### Commit
+
+You can commit what you have staged. To see what you’ve changed but not yet staged, type *git diff*. To compare the staging area the last commit, you can use *git diff --staged*.
+
+You can commit staged files any time. **Check to be on the correct branch before committing.**
+
+```bash
+$ git commit -m "Initialize repository."
+[master 536f407] Initialize repository.
+ 1 files changed, 0 insertions(+), 1 deletions(-)
+ delete mode 100644 .gitignore
+```
+
+If not yet pushed, you can amend (modify) previous commits with --amend.
+
+If you wish to commit all your changes as-is, you can use the -a flag with commit to stage all current changes beforehand.
 
 ### Push and Pull
 
