@@ -96,6 +96,13 @@ If not yet pushed, you can amend (modify) previous commits with --amend.
 
 If you wish to commit all your changes as-is, you can use the -a flag with commit to stage all current changes beforehand.
 
+As a result of a commit the object database (.git/objects) may contains four types of objects:
+
+* A blob object is the content of a file. Blob objects have no file name, time stamps, or other metadata.
+* A tree object is the equivalent of a directory. It contains a list of file names, each with some type bits and the name of a blob or tree object that is that file, symbolic link, or directory's contents. This object describes a snapshot of the source tree.
+* A commit object links tree objects together into a history. It contains the name of a tree object (of the top-level source directory), a time stamp, a log message, and the names of zero or more parent commit objects.
+* A tag object is a container that contains reference to another object and can hold additional meta-data related to another object. Most commonly, it is used to store a digital signature of a commit object corresponding to a particular release of the data being tracked by Git.
+
 ### Push and Pull
 
 ### Shelve
