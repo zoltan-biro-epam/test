@@ -8,17 +8,17 @@ Git tracks each file in the working tree for changes. Before you commit, you mus
 
 ![Staging area](http://git-scm.com/figures/18333fig0201-tn.png)
 
-Once an already staged file change, you need to re-stage it.
+Once an already staged file changes, you need to re-stage it.
 
 ``` bash
-# git init .
+$ git init .
 Initialized empty Git repository in /home/czigolag/git/.git/
 
 czigolag@yldnw0400173clu ~/git
-# touch .gitignore
+$ touch .gitignore
 
 czigolag@yldnw0400173clu ~/git
-# git status
+$ git status
 # On branch master
 #
 # Initial commit
@@ -30,39 +30,13 @@ czigolag@yldnw0400173clu ~/git
 nothing added to commit but untracked files present (use "git add" to track)
 
 czigolag@yldnw0400173clu ~/git
-# rm .gitignore
+$ git add --all
 
 czigolag@yldnw0400173clu ~/git
-# git status
-# On branch master
-#
-# Initial commit
-#
-nothing to commit (create/copy files and use "git add" to track)
+$ echo "*~" >> .gitignore
 
 czigolag@yldnw0400173clu ~/git
-# touch .gitignore
-
-czigolag@yldnw0400173clu ~/git
-# git status
-# On branch master
-#
-# Initial commit
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#       .gitignore
-nothing added to commit but untracked files present (use "git add" to track)
-
-czigolag@yldnw0400173clu ~/git
-# git add --all
-
-czigolag@yldnw0400173clu ~/git
-# echo "*~" >> .gitignore
-
-czigolag@yldnw0400173clu ~/git
-# git status
+$ git status
 # On branch master
 #
 # Initial commit
@@ -82,7 +56,7 @@ czigolag@yldnw0400173clu ~/git
 
 You can (re-)add and remove files from the staging area at any time. The staging area captures each file in the state it was staged.
 
-If git encounters a ''.gitignore'', it will apply its contents to ignore specific files/directories completely. The rules apply from the directory they are defined in. Example:
+If git encounters a *.gitignore*, it will apply its contents to ignore files/directories matching the provided patterns. These rules apply from the directory they are defined in. Example:
 
 ```
 # a comment - this is ignored
@@ -100,7 +74,7 @@ doc/*.txt
 doc/**/*.txt
 ```
 
-Git limitation: git can't track empty directories. Convention is to add an empty file named ''empty'' or ''.gitignore''.
+Git limitation: git can't track empty directories. Convention is to add an empty file named *empty* or *.gitignore*.
 
 ### Commit
 
