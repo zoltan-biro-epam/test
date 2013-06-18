@@ -5,6 +5,7 @@ In this chapter we examine operations to add and remove to and from the reposito
 ### Staging Area
 
 Git tracks each file in the working tree for changes. Before you commit, you must stage a set of changes to the staging area. Only changes in the staging area can be committed.
+(This staging area is sometimes called the index or the cache.)
 
 ![Staging area](http://git-scm.com/figures/18333fig0201-tn.png)
 
