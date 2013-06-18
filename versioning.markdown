@@ -74,7 +74,7 @@ doc/*.txt
 doc/**/*.txt
 ```
 
-Git limitation: git can't track empty directories. Convention is to add an empty file named *empty* or *.gitignore*.
+Git limitation: git can't track empty directories. Convention is to add an empty file named *empty* or *.gitignore*. In fact, Git does not track directories at all, it only tracks files, creating the directory structures based on their paths.
 
 ### Commit
 
