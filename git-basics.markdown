@@ -65,6 +65,8 @@ Cloning into 'gitex2'...
 Public key based authentication is the most convenient. You should generate yourself a private-public key pair (or reuse an existing one.) Use *ssh-keygen* on [Windows](https://help.github.com/articles/generating-ssh-keys#platform-windows) or [Linux](https://help.github.com/articles/generating-ssh-keys#platform-linux), or [PuTTY](http://katsande.com/using-puttygen-to-generate-ssh-private-public-keys) to create a new key pair.
 Copy-paste the public key to https://git.epam.com/keys and append the private key to *~/.ssh/id_rsa* .
 
+A non-bare repository is also called a *working directory*. Files within are called the *working tree*, except the .git directory, called the *index*.
+
 ##### Settings #####
 
 System-wide (/etc/.gitconfig), per-user (~/.gitconfig) and repository specific (.git/configuration) exist.
@@ -102,9 +104,9 @@ The current and complete features of git are only available using the official c
 
 ### Comparison ###
 
-* Stores snapshots, past is always accessible.
-* Three way merge, resolves tree conflicts with an ease.
+* Stores exact snapshots, past is always accessible.
+* Three way merge, pluggable merge strategies, resolves tree conflicts with an ease.
 * Cheap branching and merging.
 * Free as in free beer.
 * Vivid ecosystem, Git is a [platform](http://git.epam.com) and a [network](http://github.com)!
-* Became the standard in many environments.
+* Leading standard in SCM.
