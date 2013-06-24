@@ -99,10 +99,14 @@ If you wish to commit all your changes as-is, you can use the -a flag with commi
 As a result of a commit the object database (.git/objects) may contains four types of objects:
 
 * A blob object is the content of a file. Blob objects have no file name, time stamps, or other metadata.
-* A tree object is the equivalent of a directory. It contains a list of file names, each with some type bits and the name of a blob or tree object that is that file, symbolic link, or directory's contents. This object describes a snapshot of the source tree.
+* A tree object is the equivalent of a directory (structure). It contains a list of file names, each with some type bits and the name of a blob or tree object that is that file, symbolic link, or directory's contents. This object describes a snapshot of the source tree.
 * A commit object links tree objects together into a history. It contains the name of a tree object (of the top-level source directory), a time stamp, a log message, and the names of zero or more parent commit objects.
 * Branch and tag objects are a references to a particular commit and some additional meta-data. Once created, tags do not change.
+* HEAD-s are symbolic references to the latest state of branches, or in special cases a specific commit without a branch ("detached head.")
 
-### Push and Pull
+### Fetch and Push.
+
+Fetch and push are the mechanism by which means remote git repositories synchronize. That is, when you execute *git fetch (...)* the 
+
 
 ### Shelve
