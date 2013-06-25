@@ -106,11 +106,19 @@ As a result of a commit the object database (.git/objects) may contains four typ
 
 ### Fetch and Push.
 
-Fetch and push are the mechanism by which means remote git repositories synchronize. That is, when you execute *git fetch (...)* and you receive the objects from the remote. Your working directory does not change!
+Fetch and push are the mechanism by which means remote git repositories synchronize. That is, when you execute *git fetch (...)* you receive all the objects from the remote. Your working directory does not change however! In contrast push will publish you objects (blobs, trees, commits and branches) to a remote repository.
 
-![Git clone](http://git-scm.com/figures/18333fig0322-tn.png)
-![Git push](http://git-scm.com/figures/18333fig0323-tn.png)
-![Git fetch](http://git-scm.com/figures/18333fig0324-tn.png)
+Clone fetches all objects:
+![Git clone](http://git-scm.com/figures/18333fig0322-tn.png "clone")
 
+Someone pushes to the remote:
+![Git push](http://git-scm.com/figures/18333fig0323-tn.png "push")
+
+You fetch the changes:
+![Git fetch](http://git-scm.com/figures/18333fig0324-tn.png "fetch")
+
+*git pull* is *git fetch; git merge;* It is advised to always provide remote and branch name as parameter to avoid unexpected results.
+
+If a push fails (complaining it is unable to *fastforward*), this is a signal that your index is out of date. You should first fetch, then merge/rebase changes, then you can push. You can use *git push --force* to ignore this situation and just push you object and forcefully override the branch object('s HEAD) you are pushing. Use this with caution, other won't be able pull this branch, they will need *git fetch;git reset --hard HEAD*
 
 ### Shelve
