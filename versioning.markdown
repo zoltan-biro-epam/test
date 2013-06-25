@@ -108,9 +108,9 @@ As a result of a commit the object database (.git/objects) may contains four typ
 
 Fetch and push are the mechanism by which means remote git repositories synchronize. That is, when you execute *git fetch (...)* and you receive the objects from the remote. Your working directory does not change!
 
-[Git clone](http://git-scm.com/figures/18333fig0322-tn.png)
-[Git push](http://git-scm.com/figures/18333fig0323-tn.png)
-[Git fetch](http://git-scm.com/figures/18333fig0324-tn.png)
+![Git clone](http://git-scm.com/figures/18333fig0322-tn.png)
+![Git push](http://git-scm.com/figures/18333fig0323-tn.png)
+![Git fetch](http://git-scm.com/figures/18333fig0324-tn.png)
 
 
 ### Shelve
