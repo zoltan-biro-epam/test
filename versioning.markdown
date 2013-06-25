@@ -122,3 +122,50 @@ You fetch the changes:
 If a push fails (complaining it is unable to *fastforward*), this is a signal that your index is out of date. You should first fetch, then merge/rebase changes, then you can push. You can use *git push --force* to ignore this situation and just push you object and forcefully override the branch object('s HEAD) you are pushing. Use this with caution, other won't be able pull this branch, they will need *git fetch;git reset --hard HEAD*
 
 ### Shelve
+
+Sometimes you need to capture and discard your current state of work, or even share or pass it to someone else.
+
+##### Feature Branches
+
+If you like to share what you are currently working on, you need to create a new branch, commit you changes there. Then you can push you branch to publish it or someone may pull from you. This sounds advanced, albeit **branching and merging is a lightweight and common operation** in git. E.g.:
+
+```bash
+$ git checkout -b ideaBranch
+$ touch foo
+$ git add --all
+$ git commit -m "This might be a good idea."
+$ git push origin ideaBranch
+$ git checkout master
+```
+
+After you pushed you changes by switching back to the original branch (master) you see the precise state of before. Everyone is able now to fetch ideaBranch. We will examine branching and merging in the next chapter.
+
+##### Stash and Pop
+
+If you do not want or need to publish the changeset at hand, *git stash* is your friend. It can capture and restore what is in your staging area (cache). You do not need to commit or branch your changes.
+
+```bash
+$ touch z
+$ git add z
+$ git stash
+Saved working directory and index state WIP on master: edcf391 Resolved.
+HEAD is now at edcf391 Resolved.
+
+$ git stash list
+stash@{0}: WIP on master: edcf391 Resolved.
+
+$ git stash show
+ z | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+$ git stash pop
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#       new file:   z
+#
+Dropped refs/stash@{0} (1a35ec1d8dbd6c95b87c0a17ae7106dff15aa206)
+```
+
+You can have multiple stashed changesets at once. The drawback of stash is that it is exclusive to your local repository You can't share your stashed changes.
