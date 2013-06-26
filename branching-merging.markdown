@@ -28,7 +28,7 @@ $ git checkout -b lolz
 
 You can list current branches:
 
-```git bash
+```bash
 $ git branch -va
 * lolz                edcf391 Resolved.
  master                edcf391 Resolved.
