@@ -100,6 +100,7 @@ Without a branch referencing to them, commits (and corresponding commit, tree, b
 # Branching Strategy
 
 http://git-scm.com/book/en/Git-Branching-Remote-Branches
+http://stackoverflow.com/questions/804115/git-rebase-vs-git-merge
 
 ### Merge
 
