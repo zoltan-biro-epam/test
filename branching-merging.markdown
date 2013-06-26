@@ -30,20 +30,30 @@ You can list current branches:
 
 ```git bash
 $ git branch -va
-* master                edcf391 Resolved.
+* lolz                edcf391 Resolved.
+ master                edcf391 Resolved.
 ```
+
+To publish a branch, you need to push it to a remote:
+
+```bash
+$ git push origin lolz
+$ git push origin lolz:lolz # Local_Branch:Remote_Branch
+```
+
+You can public
 
 ## Remote branches
 
 You can add arbitrary remote repos to connect to. Use *git clone* to not to have to worry about remotes and have the original repository properly set up as the tracked remote.
 
-```git bash
+```bash
 $ git remote -v
 origin  p:/git/1 (fetch)
 origin  p:/git/1 (push)
 ```
 
-*git fetch* will copy all HEAD references, all corresponding commit, tree and blob objects (and their parents):
+*git fetch* will copy all HEAD references, and all corresponding commit, tree and blob objects (and their parents):
 
 ```bash
 $ git fetch origin
@@ -60,26 +70,22 @@ $ git branch -va
   remotes/origin/master edcf391 Resolved.
 ```
 
-
 HEAD references are put into .git/remotes/[REMOTE]/[BRANCH_NAME]. If you like to switch to such a (remote) branch, you need a branch first in your local repo:
 
 ```bash
 $ git checkout -b lolz origin/lolz
 Branch lolz set up to track remote branch refs/remotes/origin/lolz .
 Switched to a new branch "lolz "
+```
 
+Please note that remote and local branch names are not required to match and you should not expect it either. (Although it is a good default practice.
+
+```
 $ git branch -va
 * lolz                  edcf391 Resolved.
   master                edcf391 Resolved.
   remotes/origin/lolz   edcf391 Resolved.
   remotes/origin/master edcf391 Resolved.
-```
-
-To publish a branch, you need to push it to a remote:
-
-```bash
-$ git push origin lolz
-$ git push origin lolz:lolz # Local_Branch:Remote_Branch
 ```
 
 You can remove a branch:
@@ -92,6 +98,8 @@ $ git push origin :lolz # Remote
 Without a branch referencing to them, commits (and corresponding commit, tree, blob objects) are garbage collected by local git repos over time.
 
 # Branching Strategy
+
+http://git-scm.com/book/en/Git-Branching-Remote-Branches
 
 ### Merge
 
