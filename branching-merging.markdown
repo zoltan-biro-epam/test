@@ -99,9 +99,29 @@ Without a branch referencing to them, commits (and corresponding commit, tree, b
 
 # Branching Strategy
 
-http://git-scm.com/book/en/Git-Branching-Remote-Branches
-http://stackoverflow.com/questions/804115/git-rebase-vs-git-merge
+The branching strategy is the quintessence of the workflow using a CVS/SCM. Many teams fail here and use the tool at hand incorrectly. It is essential to have an understanding of the underlying mechanisms, and [to have a plan for each flow: from daily dev work through hotfixes til release](http://nvie.com/posts/a-successful-git-branching-model/).
+
+##### What branch should developers commit to?
+
+Development happens on private feature branches. That is, for each story/task development happens on a dedicated branch, so starting a new dev task/story as the first thing would be to create a new branch. This means you can commit your daily work without affecting the dev build, without the need to have to resolve any conflicts. You can push this branch to share your current work, other can use it in part or in full to in their work.
+
+##### How are completed features 
+
+Depending on the nature of your work, you can ask testers to try out your branch. If the feature branch meets the done criteria, it is ready to go back to the shared dev branch. You can either merge your work into that branch yourself, or ask the owners of that branch to do so. The latter is called a *pull request*
+
+##### Who resolves conflicts?
+
+Conflicts need to be resolved when merging in changes. So if you are merging you have to resolve the conflicts. If you create a pull request, the one pulling must resolve. In the latter case it might be policy that before creating the pull request, in order to minimize potential conflicts, you have to rebase your feature branch on top of the latest dev branch, encountering some conflicts too.
+
+##### How 
+
+* Are developers cr
 
 ### Merge
+
+http://kentnguyen.com/development/visualized-git-practices-for-team/
+http://stackoverflow.com/questions/804115/git-rebase-vs-git-merge
+http://kentnguyen.com/development/visualized-git-practices-for-team/
+
 
 ### Rebase
