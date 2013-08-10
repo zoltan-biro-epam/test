@@ -14,5 +14,6 @@
 - Git Book: http://git-scm.com/book
 - Github Help: https://help.github.com/
 - Branching strategy: http://nvie.com/posts/a-successful-git-branching-model/
+- Tips: http://mislav.uniqpath.com/2010/07/git-tips/
 - Protips: http://net.tutsplus.com/tutorials/tools-and-tips/git-tips-from-the-pros/
 - Git Bash for Windows: https://code.google.com/p/msysgit/downloads/list
